@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OOP_Project1
 {
@@ -6,13 +7,14 @@ namespace OOP_Project1
 	{
 		public static void Main(string[] args)
 		{
-			Dog dog1 = new Dog("Thea", "Labrador", 4);
-			Dog dog2 = new Dog("Tintin", "Miniature Schnauzer", 1);
-			Dog dog3 = new Dog("Sune", "chiwawa", 3);
+			List<Dog> dogs = new List<Dog>();
+			dogs.Add(new Dog("Thea", "Labrador", 4));
+			dogs.Add(new Dog("Tintin", "Miniature Schnauzer", 1));
+			dogs.Add(new Dog("Sune", "chiwawa", 3));
 
-			Console.WriteLine(dog1.GetDogInfo());
-			Console.WriteLine(dog2.GetDogInfo());
-			Console.WriteLine(dog3.GetDogInfo());
+			foreach(Dog dog in dogs) {
+				Console.WriteLine(dog.GetDogInfo());
+			}
 		}
 	}
 }
